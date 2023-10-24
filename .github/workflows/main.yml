@@ -3,7 +3,7 @@ name: CI/CD Workflow
 on:
   push:
     branches:
-      - 'release/*'  # Activa el flujo de trabajo en ramas que comienzan con "release/"
+      - 'release/*' 
 
 jobs:
   test:
@@ -16,11 +16,11 @@ jobs:
 
     - name: Install Dependencies
       run: |
-      npm install
+        npm install
 
     - name: Run Tests
       run: |
-      npm run test
+        npm run test
 
   build:
     name: Build
@@ -32,11 +32,11 @@ jobs:
 
     - name: Install Dependencies
       run: |
-      npm install
+        npm install
 
     - name: Build Project
       run: |
-      npm run build
+        npm run build
 
   deploy:
     name: Deploy
@@ -47,7 +47,7 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-     - name: QEMU
+    - name: QEMU
       uses: docker/setup-qemu-action@v3
 
     - name: Docker Buildx
