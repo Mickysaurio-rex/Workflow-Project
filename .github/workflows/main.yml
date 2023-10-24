@@ -30,7 +30,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    if: github.event_name != 'schedule' }
+    if: github.event_name != 'schedule' 
 
     steps:
       - name: Checkout código
